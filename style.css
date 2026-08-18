@@ -1,20 +1,79 @@
-*{
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #fff5fa;
+    font-family: Arial, sans-serif;
+    color: #4a2435;
+}
+
+
+/* CABEÇALHO */
+
 .cabecalho {
-    background-color: #7e3e1c; 
-display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  padding: 15px 25px; 
-} 
+    background: linear-gradient(135deg, #d94f87, #b83268);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 4px 12px rgba(120, 30, 70, 0.2);
+}
+
+.cabecalho h1 {
+    color: white;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.cabecalho-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.cabecalho-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    flex: 1;
+    padding: 40px 50px 60px;
+}
+
+h2 {
+    text-align: center;
+    color: #9e285c;
+    font-size: 25px;
+    margin-bottom: 35px;
+}
+
+
+/* CARTÕES */
+
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
 .cartao {
-    width: 260px;
-    height: 200px;
+    width: 100%;
+    height: 230px;
     perspective: 1000px;
 }
 
@@ -26,28 +85,118 @@ display: flex;
     transform-style: preserve-3d;
 }
 
+.cartao:hover .cartao-interno {
+    transform: rotateY(180deg);
+}
+
+
+/* FRENTE E VERSO */
+
 .cartao-frente,
 .cartao-verso {
     position: absolute;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     backface-visibility: hidden;
+    box-shadow: 0 8px 20px rgba(158, 40, 92, 0.15);
 }
 
-.cartao-imagem {
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-    display: block;
+.cartao-frente {
+    background: white;
+    border: 2px solid #f0a5c3;
 }
 
 .cartao-verso {
+    background: linear-gradient(135deg, #e45b91, #c93b73);
+    color: white;
     transform: rotateY(180deg);
 }
 
-.cartao:hover .cartao-interno {
-    transform: rotateY(180deg);
+
+/* TEXTOS DOS CARTÕES */
+
+.titulo-cartao {
+    color: #c23870;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.cartao-frente p:not(.titulo-cartao),
+.cartao-verso p:not(.numero) {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.cartao-verso p {
+    font-weight: 500;
+}
+
+
+/* NÚMERO DO CARTÃO */
+
+.numero {
+    position: absolute;
+    top: 15px;
+    left: 18px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #e07aa5;
+}
+
+.cartao-verso .numero {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* RODAPÉ */
+
+footer {
+    background-color: #b83268;
+    padding: 18px 25px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+    .cartoes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cabecalho {
+        padding: 20px 30px;
+    }
+
+    main {
+        padding: 35px 30px 50px;
+    }
+}
+
+@media (max-width: 550px) {
+    .cartoes {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecalho {
+        padding: 18px 20px;
+    }
+
+    .cabecalho h1 {
+        font-size: 24px;
+    }
+
+    main {
+        padding: 30px 20px 40px;
+    }
 }
