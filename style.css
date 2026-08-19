@@ -14,7 +14,7 @@ body {
 }
 
 
-/* CABEÇALHO */
+/* cabeçalho */
 
 .cabecalho {
     background: linear-gradient(135deg, #d94f87, #b83268);
@@ -46,7 +46,7 @@ body {
 }
 
 
-/* CONTEÚDO PRINCIPAL */
+/* conteudo principal */
 
 main {
     flex: 1;
@@ -61,7 +61,7 @@ h2 {
 }
 
 
-/* CARTÕES */
+/* cartoes */
 
 .cartoes {
     display: grid;
@@ -90,7 +90,7 @@ h2 {
 }
 
 
-/* FRENTE E VERSO */
+/* frente e verso dos cards */
 
 .cartao-frente,
 .cartao-verso {
@@ -120,7 +120,7 @@ h2 {
 }
 
 
-/* TEXTOS DOS CARTÕES */
+/* textos nos cartoes */
 
 .titulo-cartao {
     color: #c23870;
@@ -129,18 +129,18 @@ h2 {
     margin-bottom: 18px;
 }
 
-.cartao-frente p:not(.titulo-cartao),
+.cartao-frente p:not(.titulo-cartao), /* ele pega todos os p dentro da class cartao frente, menos os que estao dentro da outra class titulo-cartao*/
 .cartao-verso p:not(.numero) {
     font-size: 16px;
     line-height: 1.5;
 }
 
-.cartao-verso p {
+.cartao-verso p { /* ele pega todos os p dentro da class*/
     font-weight: 500;
 }
 
 
-/* NÚMERO DO CARTÃO */
+/* numero de cada flashcard */
 
 .numero {
     position: absolute;
@@ -156,7 +156,7 @@ h2 {
 }
 
 
-/* RODAPÉ */
+/* rodapé */
 
 footer {
     background-color: #b83268;
@@ -167,7 +167,8 @@ footer {
 }
 
 
-/* RESPONSIVIDADE */
+/* responsividade
+ media: quando a tela estiver na largura máxima ele faz a alteração */
 
 @media (max-width: 800px) {
     .cartoes {
