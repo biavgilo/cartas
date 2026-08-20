@@ -203,9 +203,8 @@ footer {
 }
 
 .imagem-carta {
-    width: 130px;
-    height: 130px;
-    background-color: red;
+    width: 180px;
+    height: 180px;
     object-fit: cover;
     display: block;
     border-radius: 10px;
