@@ -85,6 +85,7 @@ h2 {
     transform-style: preserve-3d;
 }
 
+/* rotação do cartão */
 .cartao:hover .cartao-interno {
     transform: rotateY(180deg);
 }
