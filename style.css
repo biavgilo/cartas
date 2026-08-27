@@ -210,3 +210,17 @@ footer {
     display: block;
     border-radius: 10px;
 }
+
+.separador {
+    max-width: 1000px;
+    margin: 50px auto 35px;
+    border-top: 2px solid #f0a5c3;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.separador h2 {
+    margin: 0;
+    color: #9e285c;
+    font-size: 25px;
+}
