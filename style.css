@@ -1,93 +1,93 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: #fff5fa;
-    font-family: Arial, sans-serif;
-    color: #4a2435;
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ background: #fff5fa;
+ font-family: Arial, sans-serif;
+ color: #4a2435;
 }
 
 
 /* cabeçalho */
 
 .cabecalho {
-    background: linear-gradient(135deg, #d94f87, #b83268);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    box-shadow: 0 4px 12px rgba(120, 30, 70, 0.2);
+ background: linear-gradient(135deg, #d94f87, #b83268);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 20px 50px;
+ box-shadow: 0 4px 12px rgba(120, 30, 70, 0.2);
 }
 
 .cabecalho h1 {
-    color: white;
-    font-size: 30px;
-    letter-spacing: 1px;
+ color: white;
+ font-size: 30px;
+ letter-spacing: 1px;
 }
 
 .cabecalho-link {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 20px;
-    transition: 0.3s;
+ color: white;
+ text-decoration: none;
+ font-size: 16px;
+ font-weight: bold;
+ padding: 8px 15px;
+ border-radius: 20px;
+ transition: 0.3s;
 }
 
 .cabecalho-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+ background-color: rgba(255, 255, 255, 0.2);
 }
 
 
 /* conteudo principal */
 
 main {
-    flex: 1;
-    padding: 40px 50px 60px;
+ flex: 1;
+ padding: 40px 50px 60px;
 }
 
 h2 {
-    text-align: center;
-    color: #9e285c;
-    font-size: 25px;
-    margin-bottom: 35px;
+ text-align: center;
+ color: #9e285c;
+ font-size: 25px;
+ margin-bottom: 35px;
 }
 
 
 /* cartoes */
 
 .cartoes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 30px;
+ max-width: 1000px;
+ margin: 0 auto;
 }
 
 .cartao {
-    width: 100%;
-    height: 230px;
-    perspective: 1000px;
+ width: 100%;
+ height: 230px;
+ perspective: 1000px;
 }
 
 .cartao-interno {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
+ position: relative;
+ width: 100%;
+ height: 100%;
+ transition: transform 0.8s;
+ transform-style: preserve-3d;
 }
 
 /* rotação do cartão */
 .cartao:hover .cartao-interno {
-    transform: rotateY(180deg);
+ transform: rotateY(180deg);
 }
 
 
@@ -95,162 +95,134 @@ h2 {
 
 .cartao-frente,
 .cartao-verso {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 25px;
-    border-radius: 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    backface-visibility: hidden;
-    box-shadow: 0 8px 20px rgba(158, 40, 92, 0.15);
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ padding: 25px;
+ border-radius: 18px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ backface-visibility: hidden;
+  box-shadow: 0 8px 20px rgba(158, 40, 92, 0.15);
 }
 
 .cartao-frente {
-    background: white;
-    border: 2px solid #f0a5c3;
+ background: white;
+ border: 2px solid #f0a5c3;
 }
 
 .cartao-verso {
-    background: linear-gradient(135deg, #e45b91, #c93b73);
-    color: white;
-    transform: rotateY(180deg);
+ background: linear-gradient(135deg, #e45b91, #c93b73);
+ color: white;
+ transform: rotateY(180deg);
 }
 
 
 /* textos nos cartoes */
 
 .titulo-cartao {
-    color: #8d063c;
-    font-size: 19px;
-    font-weight: bold;
-    margin-bottom: 18px;
+ color: #8d063c;
+ font-size: 19px;
+ font-weight: bold;
+ margin-bottom: 18px;
 }
 
 .cartao-frente p:not(.titulo-cartao), /* ele pega todos os p dentro da class cartao frente, menos os que estao dentro da outra class titulo-cartao*/
 .cartao-verso p:not(.numero) {
-    font-size: 16px;
-    line-height: 1.5;
+ font-size: 16px;
+ line-height: 1.5;
 }
 
 .cartao-verso p { /* ele pega todos os p dentro da class*/
-    font-weight: 500;
+ font-weight: 500;
 }
 
 
 /* numero de cada flashcard */
 
 .numero {
-    position: absolute;
-    top: 15px;
-    left: 18px;
-    font-size: 13px;
-    font-weight: bold;
-    color: #e07aa5;
+ position: absolute;
+top: 15px;
+ left: 18px;
+ font-size: 13px;
+ font-weight: bold;
+ color: #e07aa5;
 }
 
 .cartao-verso .numero {
-    color: rgba(255, 255, 255, 0.7);
+ color: rgba(255, 255, 255, 0.7);
 }
 
 
 /* rodapé */
 
 footer {
-    background-color: #b83268;
-    padding: 18px 25px;
-    color: white;
-    text-align: center;
-    font-size: 14px;
+ background-color: #b83268; padding: 18px 25px;
+ color: white;
+ text-align: center;
+ font-size: 14px;
 }
 
 
 /* responsividade
- media: quando a tela estiver na largura máxima ele faz a alteração */
+media: quando a tela estiver na largura máxima ele faz a alteração */
 
 @media (max-width: 800px) {
-    .cartoes {
-        grid-template-columns: repeat(2, 1fr);
-    }
+ .cartoes {
+ grid-template-columns: repeat(2, 1fr);
+ }
 
-    .cabecalho {
-        padding: 20px 30px;
-    }
-
-    main {
-        padding: 35px 30px 50px;
-    }
+ .cabecalho {
+ padding: 20px 30px;
+ }
+ main {
+ padding: 35px 30px 50px;
+ }
 }
 
 @media (max-width: 550px) {
-    .cartoes {
-        grid-template-columns: 1fr;
-    }
+ .cartoes {
+grid-template-columns: 1fr;
+}
 
-    .cabecalho {
-        padding: 18px 20px;
-    }
+ .cabecalho {
+ padding: 18px 20px;
+ }
 
-    .cabecalho h1 {
-        font-size: 24px;
-    }
+ .cabecalho h1 {
+ font-size: 24px;
+ }
 
-    main {
-        padding: 30px 20px 40px;
-    }
+ main {
+ padding: 30px 20px 40px;
+ }
 }
 
 .imagem-carta {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    display: block;
-    border-radius: 10px;
+ width: 180px;
+ height: 180px;
+ object-fit: cover;
+ display: block;
+ border-radius: 10px;
 }
 
 .separador {
-    max-width: 1000px;
-    margin: 50px auto 35px;
-    border-top: 2px solid #f0a5c3;
-    padding-top: 25px;
-    text-align: center;
+ max-width: 1000px;
+ margin: 50px auto 35px;
+ border-top: 2px solid #f0a5c3;
+ padding-top: 25px;
+ text-align: center;
 }
 
 .separador h2 {
-    margin: 0;
-    color: #9e285c;
-    font-size: 25px;
+ margin: 0;
+ color: #9e285c;
+ font-size: 25px;
 }
 .cartao-experimento {
-    height: 420px;
+ height: 350px;
 }
 
-.cartao-experimento .cartao-verso {
-    justify-content: flex-start;
-    padding: 15px;
-    overflow-y: auto; /* Permite rolar o texto se a tela for pequena */
-}
-
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* Proporção 16:9 */
-    height: 0;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    overflow: hidden;
-    transform: translateZ(1px); /* Força o navegador a renderizar o vídeo dentro da camada 3D do verso */
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
