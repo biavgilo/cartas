@@ -227,3 +227,11 @@ footer {
 .cartao-experimento {
     height: 350px;
 }
+
+.cartao-experimento iframe {
+    width: 220px;
+    height: 125px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+}
