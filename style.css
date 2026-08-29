@@ -60,19 +60,20 @@ h2 {
  margin-bottom: 35px;
 }
 
-
-/* cartoes */
-
 .cartoes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
     width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .cartao {
-    width: 100%;
+    flex: 0 0 380px;
+    width: 380px;
     height: 250px;
     perspective: 1000px;
 }
