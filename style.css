@@ -72,8 +72,8 @@ h2 {
 }
 
 .cartao {
-    flex: 0 0 380px;
-    width: 380px;
+    flex: 0 0 350px;
+    width: 350px;
     height: 250px;
     perspective: 1000px;
 }
