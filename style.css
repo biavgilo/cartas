@@ -225,7 +225,13 @@ footer {
     font-size: 25px;
 }
 .cartao-experimento {
-    height: 350px;
+    height: 420px;
+}
+
+.cartao-experimento .cartao-verso {
+    justify-content: flex-start;
+    padding: 15px;
+    overflow-y: auto; /* Permite rolar o texto se a tela for pequena */
 }
 
 .video-container {
