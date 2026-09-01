@@ -222,15 +222,3 @@ footer {
     border: none;
 }
 
-.cartoes {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 30px !important;
-    width: 1200px !important;
-    max-width: none !important;
-    margin: 0 auto !important;
-}
-
-.cartao {
-    width: 100% !important;
-}
