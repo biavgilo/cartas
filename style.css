@@ -222,3 +222,8 @@ footer {
     border: none;
 }
 
+.instrucao {
+     margin: 0;
+ color: #6a012e;
+ font-size: 18px;
+}
